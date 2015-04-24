@@ -90,7 +90,7 @@
 		</div> <!-- end objectif -->
 		<div class="education col-md-6">
 			<h2 class="title">Education</h2>
-			<ul>
+			<ul class="list-info-action">
 				<li ng-repeat="row in edus">
 					<!-- <span class="edu-item" contenteditable>{{row.uni}} - {{row.desc}}</span> -->
 						<input class="bold"  name="uni-name" type="text" placeholder="University" ng-model="row.uni" required>
@@ -98,11 +98,13 @@
 
 						<input class="input-year" name="uni-start" type="text" placeholder="start" ng-model="row.period.start" required ng-maxlength="4">-
 						<span class="error" ng-show="frmProfile.uni-start.$error.required">required</span>
+
 						<input class="input-year" name="uni-end" type="text" placeholder="end" ng-model="row.period.end" required ng-maxlength="7">
 						<span class="error" ng-show="frmProfile.uni-end.$error.required">required</span>
 						<br>
 
-						<input name="uni-desc" type="text" placeholder="Uni desc" ng-model="row.desc" required>
+						<textarea name="uni-desc" placeholder="Uni desc" ng-model="row.desc" rows="2" required></textarea>
+
 						<span class="error" ng-show="frmProfile.uni-desc.$error.required">required</span>
 
 
@@ -115,9 +117,8 @@
 	<div class="row">
 		<div class="experience col-md-6">
 			<h2 class="title">Experience</h2>
-			<ul>
+			<ul class="list-info-action">
 				<li ng-repeat="e in exps">
-					<!-- <span contenteditable class="company">{{e.company}}</span> -->
 						<input class="bold"  name="company_{{exps.indexOf(e)}}" type="text" placeholder="Company" ng-model="e.company" required>
 						<span class="error" ng-show="frmProfile.company_{{exps.indexOf(e)}}.$error.required">required</span>
 					
@@ -134,10 +135,15 @@
 		</div><!--  end experience -->
 		<div class="skill col-md-6">
 			<h2 class="title">Skill</h2>
-			<ul>
+			<ul class="list-info-action">
 				<li ng-repeat="s in skills">
-					<span contenteditable class="name">{{s.name}}</span>-
-					<span contenteditable class="rate">{{s.rate}}</span>
+	
+						<input class="bold"  name="skillname_{{s.indexOf(s)}}" type="text" placeholder="Skill name" ng-model="s.name" required>
+						<span class="error" ng-show="frmProfile.skillname_{{s.indexOf(s)}}.$error.required">required</span>
+	
+						<input class="input-rate"  name="rate_{{s.indexOf(s)}}" type="text" placeholder="Skill rate" ng-model="s.rate" required>
+						<span class="error" ng-show="frmProfile.rate_{{s.indexOf(s)}}.$error.required">required</span>
+
 					<a href ng-click="addSkill()" class="label label-success">Add</a>
 					<a href ng-click="removeSkill($index)" title="Remove" class="label label-danger">Remove</a>
 				</li>

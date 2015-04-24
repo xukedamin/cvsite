@@ -70,7 +70,8 @@ cvControllers.controller('CVDetailsCtrl', function($scope, $http, $routeParams) 
       $scope.nextItem = 0;
     }
 
-    // console.log("include");
+    //remove all other theme style
+    $("LINK[href*='css/theme']").remove();
     $('head').append('<link rel="stylesheet" href="css/theme/'+  $routeParams.itemId +'.css" type="text/css" />');
 
     

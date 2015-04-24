@@ -13,7 +13,6 @@ ul{
 }
 :focus{
 	outline: none;
-	background-color: #2ecc71;
 }
 .cvdetails input,
 .cvdetails textarea{

@@ -6,9 +6,34 @@ body {
 ul{
 	padding-left: 5px;
 }
+input{
+	background: transparent;
+}
+
+:focus{
+	background-color: #2ecc71;
+	color: white;
+}
+:focus::-webkit-input-placeholder {
+	color: white;
+}
+:focus:-moz-placeholder {
+  color: white;
+}
+:focus::-moz-placeholder {
+  color: white;
+}
+:focus:-ms-input-placeholder {
+  color: white;
+}
+
+
+.bold{
+	font-weight: 700;
+}
 
 .cvdetails{
-
+	background: url("cocacola/wave.png") no-repeat scroll center center / 100% auto rgba(0, 0, 0, 0);
 }
 .cv-header{
 	
@@ -22,6 +47,11 @@ ul{
 	max-width: 300px;
 	margin: 10px auto;
 }
+.title{
+	background: url("cocacola/cocacola_icon.png") no-repeat left center;
+	padding-left: 30px;
+	color: #cf3a3c;
+}
 
 /*=profile*/
 .cv-profile{
@@ -30,7 +60,7 @@ ul{
 }
 
 .cv-profile .avatar{
-	border: 1px solid red;
+	border: 2px solid red;
 	width: 100px;
 	height: 100px;
 }
@@ -65,6 +95,10 @@ input[name="uni-name"]{
 	width: 55px;
 	text-align: center;
 }
+.input-rate{
+	width: 55px;
+	text-align: center;
+}
 
 /*=ending (footer) of cvdetails*/
 .cvdetails > .row:last-child:after{
@@ -74,4 +108,11 @@ input[name="uni-name"]{
 	width: 100%;
 	margin-bottom: 10px;
 
+}
+
+.list-info-action a.label{
+	display: none;
+}
+.list-info-action li:hover a.label{
+	display: inline;
 }
