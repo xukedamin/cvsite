@@ -1,0 +1,77 @@
+/*cocacola theme*/
+body {
+    font-family: 'Roboto', sans-serif;
+    -webkit-font-smoothing: antialiased;
+}
+ul{
+	padding-left: 5px;
+}
+
+.cvdetails{
+
+}
+.cv-header{
+	
+}
+.logo-wrapper{
+	background-color: red;
+	padding-top: 15px;
+	padding-bottom: 15px;
+}
+.cv-header img{
+	max-width: 300px;
+	margin: 10px auto;
+}
+
+/*=profile*/
+.cv-profile{
+	margin-top: 40px;
+	margin-bottom: 40px;
+}
+
+.cv-profile .avatar{
+	border: 1px solid red;
+	width: 100px;
+	height: 100px;
+}
+
+.list-info{
+	padding-left: 0;
+}
+.list-info li{
+	padding-bottom: 10px;
+}
+.list-info li:last-child{
+	padding-bottom: 0;
+}
+.list-info.right li,
+.list-info.right input, .list-info.right .error{
+	text-align: right;
+	float: right;
+}
+
+/*=objectif*/
+.objectif textarea[name="objectif"]{
+	height: auto;
+	overflow: hidden;
+	resize: none;
+}
+
+/*=education*/
+input[name="uni-name"]{
+	font-weight: 700;
+}
+.input-year{
+	width: 55px;
+	text-align: center;
+}
+
+/*=ending (footer) of cvdetails*/
+.cvdetails > .row:last-child:after{
+	display: block;
+	content: "";
+	height: 40px;
+	width: 100%;
+	margin-bottom: 10px;
+
+}

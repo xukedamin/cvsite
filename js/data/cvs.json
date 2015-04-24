@@ -1,0 +1,53 @@
+[
+    {
+    	"id": "cocacola",
+    	"name": "Coca cola",
+        "desc": "Mẫu CV theo phong cách CocaCola Hot"
+    },
+    {
+        "id": "simplegreen",
+        "name": "Simple Green",
+        "desc": "Mẫu CV theo phong cách simple green"
+    },
+    {
+        "id": "simpleblackwhite",
+        "name": "Simple Black White",
+        "desc": "Mẫu CV theo phong cách simple"
+    }  
+    ,
+    {
+        "id": "classic1",
+        "name": "classic number 1",
+        "desc": "Mẫu CV theo phong cách classic"
+    }  
+    ,
+    {
+        "id": "simpleorange",
+        "name": "Simple orange",
+        "desc": "Mẫu CV theo phong cách simpleorange"
+    }  
+    ,
+    {
+        "id": "simpleblue",
+        "name": "Simple blue",
+        "desc": "Mẫu CV theo phong cách simpleblue"
+    }  
+    ,
+    {
+        "id": "crazy",
+        "name": "crazy",
+        "desc": "Mẫu CV theo phong cách crazy"
+    }  
+    ,
+    {
+        "id": "canon",
+        "name": "canon",
+        "desc": "Mẫu CV theo phong cách canon"
+    }
+     ,
+    {
+        "id": "vcb",
+        "name": "Vietcombank",
+        "desc": "Mẫu CV theo phong cách Vietcombank"
+    }  
+]

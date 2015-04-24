@@ -1,0 +1,37 @@
+<section ng-controller="CVListCtrl">
+    <div class="row" >
+	    <div class="col-md-8">
+	    	
+	    </div>
+	    <div class="col-md-4">
+		Tìm: <input ng-model="query" class="form-control col-md-12">
+		Theo:<select ng-model="orderProp" class="form-control col-md-6" autofocus>
+					  <option value="name">Name</option>
+					  <option value="id">Id</option>
+					</select>
+					<div class="col-md-6">
+						<label class="control-group">
+							<input type="radio" ng-model="direction" name="direction" checked>Asc
+						</label>
+						<label class="control-group">
+							<input type="radio" ng-model="direction" name="direction" value="reverse">Desc
+						</label>
+					</div>
+	    </div>
+	  </div>
+	  <div class="row">
+    	<div class="col-md-12">
+		  <ul class="cvlist" >
+	    	<li class="col-md-4 item cf" ng-repeat="CV in cvs | filter:query | orderBy:orderProp:direction">
+	    	<!-- <a href="#/details/{{cvs.indexOf(CV)}}"> -->
+	    	<a href="#/details/{{CV.id}}">
+	    		<h1>{{CV.name}} </h1>
+	    		<img ng-src="images/tn/{{CV.id}}.png" alt="{{CV.id}}">
+	    		<p>{{CV.desc}}</p>
+	    	</a>
+	    	</li>
+	    </ul>
+		 </div>
+  </div>
+	
+</section>

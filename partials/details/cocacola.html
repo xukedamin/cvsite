@@ -1,0 +1,147 @@
+<section class="cvdetails" ng-controller="CVDetailsCtrl" ng-form name="frmProfile">
+	<nav>
+		<a href="#/details/{{prevItem}}" class="btn btn-success"><i class="glyphicon glyphicon-chevron-left"></i></a>
+		<a href="#/details/{{nextItem}}" class="btn btn-success"><i class="glyphicon glyphicon-chevron-right"></i></a>
+		<button type="submit" class="btn btn-primary pull-right" ng-disabled="frmProfile.$invalid">Save</button>
+	</nav>
+	<div class="row">
+		<div class="col-md-12 cv-header" ng-model="cvs">
+			<h1 class="text-center col-md-12">{{itemId}}</h1>
+			<div class="logo-wrapper col-md-12">
+				<img ng-src="images/logos/{{itemId}}.png" alt="logo" class="img-responsive">
+			</div>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-md-12 cv-profile" >
+			<div class="col-md-5" >
+				<ul class="list-info right">
+					<li>
+						<input name="nation" type="text" placeholder="Nationality"
+										ng-model="candidate.profile.nationality" 
+									ng-maxlength="25" required>
+						<span class="error" ng-show="frmProfile.nation.$error.required">required</span>
+					</li>
+					<li>
+						<input name="dob" type="text" placeholder="DOB" ng-model="candidate.profile.dob" ng-maxlength="25" required>
+						<span class="error" ng-show="frmProfile.dob.$error.required">required</span>
+					</li>
+					<li>
+						<input name="addr" type="text" placeholder="Address" ng-model="candidate.profile.addr" ng-maxlength="25" required>
+						<span class="error" ng-show="frmProfile.addr.$error.required">required</span>
+					</li>
+				</ul>
+			</div>
+
+			<div class="col-md-2" file-dropzone="[image/png, image/jpeg, image/gif]"
+          file="image" file-name="imageFileName" data-max-file-size="1" ng-file-select>
+				<img ng-src="images/avatar/{{itemId}}.jpg" alt="no avatar" class="avatar img-responsive img-circle" ng-hide="image">
+		    <div ng-hide="image" class="text-center">Drop Image Here</div>
+	      <img ng-src={{image}} class="avatar img-responsive img-circle" ng-bind="candidate.profile.avatar" ng-show="image"/>
+	      <span class="file-name">{{imageFileName}}</span>
+			</div>
+<!-- 
+			<div ng-file-drop ng-file-select ng-model="files" class="drop-box" 
+			    drag-over-class="dragover" ng-multiple="false" allow-dir="true"
+			    accept="image/*">Drop pdfs or images here or click to upload</div>
+			<div ng-no-file-drop>File Drag/Drop is not supported for this browser</div> 
+			<ul>
+			    <li ng-repeat="f in files">{{f.name}}<img ng-src="{{f.name}}" alt=""></li>
+			</ul>-->
+
+
+			<div class="col-md-5">
+				<ul class="list-info">
+					<li>
+						<input name="mobile" type="text" placeholder="Mobile" ng-model="candidate.profile.mobile" ng-maxlength="25" required>
+						<span class="error" ng-show="frmProfile.mobile.$error.required">required</span>
+					</li>
+					<li>
+						<input name="email" type="text" placeholder="Email" ng-model="candidate.profile.email" ng-maxlength="25" required>
+						<span class="error" ng-show="frmProfile.email.$error.required">required</span>
+					</li>
+					<li>
+						<input name="website" type="text" placeholder="Website" ng-model="candidate.profile.website" ng-maxlength="25" required>
+						<span class="error" ng-show="frmProfile.website.$error.required">required</span></li>
+					</ul>
+			</div>
+				
+			<div class="col-md-12 text-center">
+					<h2 class="cv-profile-name">
+						<input class="text-center text-uppercase" name="pfname" type="text" placeholder="Your name" ng-model="candidate.profile.name" ng-maxlength="25" required>
+						<span class="error" ng-show="frmProfile.pfname.$error.required">required</span>
+					</h2>
+					<h4 class="cv-profile-title">
+						<input class="text-center" name="pftitle" type="text" placeholder="Title" ng-model="candidate.profile.title" ng-maxlength="25" required>
+						<span class="error" ng-show="frmProfile.pftitle.$error.required">required</span>
+					</h4>
+			</div>
+		</div> <!-- end profile -->
+	</div><!-- end row -->
+	
+	<div class="row">
+		<div class="objectif col-md-6">
+			<h2 class="title">Objectif</h2>
+			<div>
+				<!-- {{candidate.objectif}} -->
+				<textarea name="objectif" id="objectif" placeholder="Objectif" ng-model="candidate.objectif" required rows="6"></textarea>
+				<span class="error" ng-show="frmProfile.objectif.$error.required">required</span>
+			</div>
+		</div> <!-- end objectif -->
+		<div class="education col-md-6">
+			<h2 class="title">Education</h2>
+			<ul>
+				<li ng-repeat="row in edus">
+					<!-- <span class="edu-item" contenteditable>{{row.uni}} - {{row.desc}}</span> -->
+						<input class="bold"  name="uni-name" type="text" placeholder="University" ng-model="row.uni" required>
+						<span class="error" ng-show="frmProfile.uni-name.$error.required">required</span>
+
+						<input class="input-year" name="uni-start" type="text" placeholder="start" ng-model="row.period.start" required ng-maxlength="4">-
+						<span class="error" ng-show="frmProfile.uni-start.$error.required">required</span>
+						<input class="input-year" name="uni-end" type="text" placeholder="end" ng-model="row.period.end" required ng-maxlength="7">
+						<span class="error" ng-show="frmProfile.uni-end.$error.required">required</span>
+						<br>
+
+						<input name="uni-desc" type="text" placeholder="Uni desc" ng-model="row.desc" required>
+						<span class="error" ng-show="frmProfile.uni-desc.$error.required">required</span>
+
+
+					<a href ng-click="addEdu()" class="label label-success">Add</a>
+					<a href ng-click="removeEdu($index)" title="Remove" class="label label-danger">Remove</a>
+				</li>
+			</ul>
+		</div> <!-- end education -->
+	</div><!-- end row -->
+	<div class="row">
+		<div class="experience col-md-6">
+			<h2 class="title">Experience</h2>
+			<ul>
+				<li ng-repeat="e in exps">
+					<!-- <span contenteditable class="company">{{e.company}}</span> -->
+						<input class="bold"  name="company_{{exps.indexOf(e)}}" type="text" placeholder="Company" ng-model="e.company" required>
+						<span class="error" ng-show="frmProfile.company_{{exps.indexOf(e)}}.$error.required">required</span>
+					
+					<input class="input-year" name="company-start" type="text" placeholder="start" ng-model="e.period.start" required ng-maxlength="4">-
+					<span class="error" ng-show="frmProfile.company-start.$error.required">required</span>
+					<input class="input-year" name="company-end" type="text" placeholder="end" ng-model="e.period.end" required ng-maxlength="7">
+					<span class="error" ng-show="frmProfile.company-end.$error.required">required</span>
+					<br>
+					<span contenteditable class="desc">{{e.desc}}</span>
+					<a href ng-click="addExp()" class="label label-success">Add</a>
+					<a href ng-click="removeExp($index)" title="Remove" class="label label-danger">Remove</a>
+				</li>
+			</ul>
+		</div><!--  end experience -->
+		<div class="skill col-md-6">
+			<h2 class="title">Skill</h2>
+			<ul>
+				<li ng-repeat="s in skills">
+					<span contenteditable class="name">{{s.name}}</span>-
+					<span contenteditable class="rate">{{s.rate}}</span>
+					<a href ng-click="addSkill()" class="label label-success">Add</a>
+					<a href ng-click="removeSkill($index)" title="Remove" class="label label-danger">Remove</a>
+				</li>
+			</ul>
+		</div><!--  end skill -->
+	</div><!-- end row -->
+	</section>

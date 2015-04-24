@@ -1,0 +1,92 @@
+<section class="cvdetails container">
+	<div class="row">
+		<div class="col-md-12 cv" ng-model="cvs">
+		<a href="#/details/{{prevItem}}" class="btn btn-success"><i class="glyphicon glyphicon-chevron-left"></i></a>
+		<a href="#/details/{{nextItem}}" class="btn btn-success"><i class="glyphicon glyphicon-chevron-right"></i></a>
+			<h1 class="text-center col-md-12">{{cvs[itemId].name}}</h1>
+			<img ng-src="images/logos/{{cvs[itemId].id}}.png" alt="logo" class="img-responsive">
+
+			
+
+		
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-md-12 profile">
+		<div class="col-md-5 text-right">	
+			<span contenteditable class="col-md-12">
+				{{candidate.profile.nationality}}
+			</span>
+			<span contenteditable class="col-md-12">
+				{{candidate.profile.dob}}
+			</span>
+			<span contenteditable class="col-md-12">
+				{{candidate.profile.addr}}
+			</span>
+		</div>
+		<div class="col-md-2">
+			<img ng-src="images/avatar/{{cvs[itemId].id}}.jpg" alt="no avatar">
+			{{candidate.profile.avatar}}
+			</div>
+		<div class="col-md-5">
+			<span contenteditable class="col-md-12">
+				{{candidate.profile.mobile}}
+			</span>
+			<span contenteditable class="col-md-12">
+			{{candidate.profile.email}}
+			</span>
+			<span contenteditable class="col-md-12">
+			{{candidate.profile.website}}
+			</span>
+		</div>
+	</div><!-- end row -->
+	<div class="row">
+			<div class="col-md-12 text-center">
+				<h2 contenteditable>{{candidate.profile.name}}</h2>
+				<h4 contenteditable>{{candidate.profile.title}}</h4>
+			</div>
+	</div><!-- end row -->
+	<div class="row">
+		<div class="objectif col-md-6">
+				<h2 class="title">Objectif</h2>
+				<div contenteditable>
+					{{candidate.objectif}}
+				</div>
+		</div>
+		<div class="objectif col-md-6">
+				<h2 class="title">Education</h2>
+				<ul>
+					<li ng-repeat="row in edus">
+						<span class="edu-item" contenteditable>{{row.uni}} - {{row.desc}}</span>
+						<a href ng-click="addEdu()" class="label label-success">Add</a>
+						<a href ng-click="removeEdu($index)" title="Remove" class="label label-danger">Remove</a>
+					</li>
+				</ul>
+		</div>
+	</div><!-- end row -->
+		<div class="row">
+		<div class="objectif col-md-6">
+				<h2 class="title">Experience</h2>
+				<ul>
+					<li ng-repeat="e in exps">
+						<span contenteditable class="company">{{e.company}}</span>-
+						<span contenteditable class="desc">{{e.desc}}</span>
+						<a href ng-click="addExp()" class="label label-success">Add</a>
+						<a href ng-click="removeExp($index)" title="Remove" class="label label-danger">Remove</a>
+					</li>
+				</ul>
+				
+		</div>
+		<div class="objectif col-md-6">
+				<h2 class="title">Skill</h2>
+				<ul>
+					<li ng-repeat="s in skills">
+						<span contenteditable class="name">{{s.name}}</span>-
+						<span contenteditable class="rate">{{s.rate}}</span>
+						<a href ng-click="addSkill()" class="label label-success">Add</a>
+						<a href ng-click="removeSkill($index)" title="Remove" class="label label-danger">Remove</a>
+					</li>
+				</ul>
+		</div>
+	</div><!-- end row -->
+</section>

@@ -1,0 +1,45 @@
+[
+	{
+		"profile":{
+				"name": "Nguyen Van A",
+				"nationality":"Vietnamese",
+				"dob" : "April 8, 1994",
+				"addr": "123 Thang Long, HCMC",
+				"avatar":"",
+				"mobile":"0123456789",
+				"email" : "nva@gmail.com",
+				"website":"http://nva.com",
+				"title" :"Sale Staff"
+		},
+    "objectif":"Gather more and more kills and knowledge to become a professional sale staff. Always has a serious working attitude and not afraid of challenging and demanding work to meet sales targets of company. "
+    ,
+    "education":[
+	    {
+	    	"uni": "Foreign Trade University",
+	    	"period":{
+					"start": "2010",
+					"end": "2012"
+	    		},
+	    	"desc" :"Major: Marketing (Excellent Degree, total result: 8.0)"
+	    }
+    ],
+    "experience" :
+    	[
+		    {	
+		    	"company": "ABC shop def",
+		    	"period":{
+						"start": "2013",
+						"end": "2014"
+		    		},
+		    	"desc" : "Greeted abc Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente perspiciatis eligendi molestiae officia cupiditate voluptates, totam magnam, sed ipsa iste, ratione impedit voluptas esse fugiat autem labore accusantium suscipit quidem."
+		    }
+	    ]
+    ,
+    "skill": [
+	    { "name": "Communication skill",  "rate" :" 50%"},
+	    { "name": "Clever, flexible ",  "rate" :" 50%"},
+	    { "name": "Negotiation skill",  "rate" :" 50%"},
+	    { "name": "Team-work",  "rate" :" 50%"}
+    ]
+	}
+]
