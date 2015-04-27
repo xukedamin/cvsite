@@ -6,24 +6,24 @@ body {
 ul{
 	padding-left: 5px;
 }
-input{
+input, textarea{
 	background: transparent;
 }
 
-:focus{
+.cvdetails :focus{
 	background-color: #2ecc71;
 	color: white;
 }
-:focus::-webkit-input-placeholder {
+.cvdetails :focus::-webkit-input-placeholder {
 	color: white;
 }
-:focus:-moz-placeholder {
+.cvdetails :focus:-moz-placeholder {
   color: white;
 }
-:focus::-moz-placeholder {
+.cvdetails :focus::-moz-placeholder {
   color: white;
 }
-:focus:-ms-input-placeholder {
+.cvdetails :focus:-ms-input-placeholder {
   color: white;
 }
 
@@ -33,7 +33,7 @@ input{
 }
 
 .cvdetails{
-	background: url("cocacola/wave.png") no-repeat scroll center center / 100% auto rgba(0, 0, 0, 0);
+	background: url("cocacola/wave.png") no-repeat scroll 100px 0 / 100% auto rgba(0, 0, 0, 0);
 }
 .cv-header{
 	

@@ -37,9 +37,9 @@
     ,
     "skill": [
 	    { "name": "Communication skill",  "rate" :" 50%"},
-	    { "name": "Clever, flexible ",  "rate" :" 50%"},
-	    { "name": "Negotiation skill",  "rate" :" 50%"},
-	    { "name": "Team-work",  "rate" :" 50%"}
+	    { "name": "Clever, flexible ",  "rate" :" 10%"},
+	    { "name": "Negotiation skill",  "rate" :" 30%"},
+	    { "name": "Team-work",  "rate" :" 70%"}
     ]
 	}
 ]

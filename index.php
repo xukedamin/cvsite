@@ -21,6 +21,7 @@
     <script src="lib/angular.min.js"></script>
     <script src="lib/angular-route.min.js"></script>
     <script src="https://code.jquery.com/jquery-1.11.2.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
     <script src="js/cvApp.js"></script>
     <script src="lib/angular-file-dnd.min.js"></script>
 <!--     // <script src="lib/angular-file-upload-shim.js"></script> 

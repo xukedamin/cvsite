@@ -144,6 +144,16 @@
 						<input class="input-rate"  name="rate_{{s.indexOf(s)}}" type="text" placeholder="Skill rate" ng-model="s.rate" required>
 						<span class="error" ng-show="frmProfile.rate_{{s.indexOf(s)}}.$error.required">required</span>
 
+						<div class="rating">
+							<span id="1">☆</span><span id="2">☆</span><span id="3">☆</span><span id="4">☆</span><span id="5">☆</span>
+						</div>
+						<div class="progress">
+						  <div class="progress-bar progress-bar-success" role="progressbar" 
+						  		aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: {{s.rate}}">
+						    <span class="sr-only">40% Complete (success)</span>
+						  </div>
+						</div>
+
 					<a href ng-click="addSkill()" class="label label-success">Add</a>
 					<a href ng-click="removeSkill($index)" title="Remove" class="label label-danger">Remove</a>
 				</li>

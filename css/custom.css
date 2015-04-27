@@ -37,6 +37,13 @@ ul{
 	text-transform: uppercase;
 }
 
+/*=rating*/
+.rating > span:hover:before{
+	content: "\2605";
+	position: absolute;
+}
+
+
 /*=footer*/
 footer{
 	background-color: #2c3e50;
