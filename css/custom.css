@@ -14,6 +14,36 @@ ul{
 :focus{
 	outline: none;
 }
+
+.cvlist {
+	padding-left: 0;
+}
+
+.cvlist .item a{
+	/*float: left;
+	width: 100%;*/
+	/*border: 1px solid #ddd;*/
+	box-shadow: 0 1px 3px rgba(0,0,0,0.3);
+	/*margin: 15px;*/
+	text-align: center;
+}
+.cvlist .item a:hover{
+	text-decoration: none;
+}
+
+.cvlist .item img{
+	height: 230px;
+	margin: 0 auto;
+}
+
+.cvlist .item .desc{
+	height: 40px;
+	overflow: hidden;
+	color: #333;
+	padding: 5px 10px;
+}
+
+
 .cvdetails input,
 .cvdetails textarea{
 	border: none;

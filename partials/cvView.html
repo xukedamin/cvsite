@@ -1,27 +1,26 @@
 <section ng-controller="CVListCtrl">
     <div class="row" >
 	    <div class="col-md-8">
-	    	
 	    </div>
 	    <div class="col-md-4">
 	    	<div class="input-group">
-					<input ng-model="query" class="form-control col-md-12" placeholder="Seach for">
-					<select ng-model="orderProp" class="form-control col-md-6" autofocus>
-					  <option value="name" ng-model="direction">Name</option>
-					  <option value="id" ng-model="direction">Id</option>
-					</select>
+		<!-- 			<select ng-model="orderProp" class="form-control col-md-6" autofocus>
+					  <option value="name">Name</option>
+					  <option value="id">Id</option>
+					</select> -->
 				</div>
 				<div class="input-group">
 		      <input ng-model="query" type="text" class="form-control" aria-label="..." placeholder="Seach for">
 		      <div class="input-group-btn">
 		        <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false">Action <span class="caret"></span></button>
 		        <ul class="dropdown-menu dropdown-menu-right" role="menu" ng-model="orderProp">
-		          <li><a href="#">Action</a></li>
+		          <li><a href="#" ng-click="changeOrder(name)" value="name">Name</a></li>
+		           <li><a href="#" ng-click="changeOrder(value)" value="id">Id</a></li>
 		        </ul>
 		      </div><!-- /btn-group -->
 		    </div><!-- /input-group -->
 
-				<div class="col-md-6">
+				<div class="col-md-12">
 					<label class="control-group">
 						<input type="radio" ng-model="direction" name="direction" checked>Asc
 					</label>
@@ -36,14 +35,32 @@
 		  <ul class="cvlist" >
 	    	<li class="col-md-4 item cf" ng-repeat="CV in cvs | filter:query | orderBy:orderProp:direction">
 	    	<!-- <a href="#/details/{{cvs.indexOf(CV)}}"> -->
-	    	<a href="#/details/{{CV.id}}">
-	    		<h3 class="title">{{CV.name}} </h3>
-	    		<img ng-src="images/tn/{{CV.id}}.png" alt="{{CV.id}}" class="img-responsive">
-	    		<p>{{CV.desc}}</p>
-	    	</a>
+		    	<a href="#/details/{{CV.id}}" class="thumbnail">
+		    		<img ng-src="images/tn/{{CV.id}}.png" alt="{{CV.id}}" class="img-responsive">
+		    		<h5 class="title">{{CV.name}} </h5>
+		    		<p class="desc">{{CV.desc}}</p>
+		    	</a>
 	    	</li>
 	    </ul>
 		 </div>
   </div>
-	
+	<nav>
+	  <ul class="pagination">
+	    <li>
+	      <a href="#" aria-label="Previous">
+	        <span aria-hidden="true">&laquo;</span>
+	      </a>
+	    </li>
+	    <li><a href="#">1</a></li>
+	    <li><a href="#">2</a></li>
+	    <li><a href="#">3</a></li>
+	    <li><a href="#">4</a></li>
+	    <li><a href="#">5</a></li>
+	    <li>
+	      <a href="#" aria-label="Next">
+	        <span aria-hidden="true">&raquo;</span>
+	      </a>
+	    </li>
+	  </ul>
+	</nav>
 </section>

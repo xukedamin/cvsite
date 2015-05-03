@@ -6,13 +6,20 @@ cvControllers.controller('CVListCtrl', function ($scope, $http, $q, cvsService) 
  $scope.cvs = cvsService.cvs;  
   cvsService.getcvs();
 
+
  $scope.addNewcv = function(cvName){
     var cv = {name: cvName};
     cvsService.addNewcv(cv);
   }
 
   //init
-   $scope.orderProp = 'name';
+ $scope.orderProp = 'id';
+ console.log($scope.orderProp);
+
+ $scope.changeOrder = function($order){
+  console.log(this);
+  console.log($order);
+ }
 
     // add a row in order invoice
     $scope.addItem = function() {
